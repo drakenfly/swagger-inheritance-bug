@@ -1,4 +1,4 @@
-Irecently discovered a bug in Swagger-Core affecting object property resolution. As far as I could debug, it is related to a short circuit in object traversal to prevent StackOverflows - see ModelResolver:394.
+I recently discovered a bug in Swagger-Core affecting object property resolution. As far as I could debug, it is related to a short circuit in object traversal to prevent StackOverflows - see ModelResolver:394.
 
 I could obersve the problem for two objects with a cyclic dependency on each other, whilst sharing a common base type and forcing the OpenAPI generator to traverse the object tree in a specific order using the allOf attribute.
 
